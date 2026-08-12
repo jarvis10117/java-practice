@@ -1,4 +1,4 @@
-package oop.streams_and_lambdas;
+package streams.streams_and_lambdas;
 
 import java.util.List;
 
