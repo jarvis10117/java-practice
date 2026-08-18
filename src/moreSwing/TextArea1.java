@@ -21,11 +21,9 @@ public class TextArea1 {
         JFrame frame = new JFrame();
 
         JPanel panel = new JPanel();
-
         JButton button = new JButton("Just Click It");
 
         JTextArea text = new JTextArea(10, 20);
-
         text.setLineWrap(true);
 
         button.addActionListener(e -> text.append("button clicked \n"));
@@ -33,7 +31,6 @@ public class TextArea1 {
         JScrollPane scroller = new JScrollPane(text);
 
         scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
         scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         panel.add(scroller);
