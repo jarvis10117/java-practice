@@ -10,6 +10,11 @@ public class TextArea1 {
 
     public static void main(String[] args) {
 
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {
+            // fall back to default look and feel
+        }
         TextArea1 gui = new TextArea1();
 
         gui.go();
