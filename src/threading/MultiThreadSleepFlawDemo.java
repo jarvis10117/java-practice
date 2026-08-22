@@ -15,7 +15,7 @@ public class MultiThreadSleepFlawDemo {
         CountDownLatch finishLatch = new CountDownLatch(THREAD_COUNT);
 
         for (int i = 0; i < THREAD_COUNT; i++) {
-            final int threadId = i;
+
             threads[i] = new Thread(() -> {
                 readyLatch.countDown(); // Signal that thread is created and waiting
                 try {

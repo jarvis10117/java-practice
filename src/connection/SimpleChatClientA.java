@@ -20,19 +20,13 @@ public class SimpleChatClientA {
         sendButton.addActionListener(e -> sendMessage());
 
         JPanel mainPanel = new JPanel();
-
         mainPanel.add(outgoing);
-
         mainPanel.add(sendButton);
 
         JFrame frame = new JFrame("Ludicrously Simple Chat Client");
-
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel);
-
         frame.setSize(400, 100);
-
         frame.setVisible(true);
-
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
     }
@@ -42,11 +36,8 @@ public class SimpleChatClientA {
         try {
 
             InetSocketAddress serverAddress = new InetSocketAddress("127.0.0.1", 5000);
-
             SocketChannel socketChannel = SocketChannel.open(serverAddress);
-
             writer = new PrintWriter(Channels.newWriter(socketChannel, UTF_8));
-
             System.out.println("Networking established.");
 
         } catch (IOException e) {
@@ -60,11 +51,8 @@ public class SimpleChatClientA {
     private void sendMessage() {
 
         writer.println(outgoing.getText());
-
         writer.flush();
-
         outgoing.setText("");
-
         outgoing.requestFocus();
 
     }
